@@ -21,7 +21,18 @@ export const books = pgTable(
   (table) => [index("books_author_id_idx").on(table.authorId)],
 );
 
+export const students = pgTable("students", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  studentId: text("student_id").notNull().unique(),
+  firstName: text("first_name").notNull(),
+  lastName: text("last_name").notNull(),
+  birthDate: text("birth_date").notNull(),
+  gender: text("gender").notNull(),
+});
+
 export type Author = typeof authors.$inferSelect;
 export type NewAuthor = typeof authors.$inferInsert;
 export type Book = typeof books.$inferSelect;
 export type NewBook = typeof books.$inferInsert;
+export type Student = typeof students.$inferSelect;
+export type NewStudent = typeof students.$inferInsert;

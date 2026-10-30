@@ -8,6 +8,13 @@
       "when": 1785945733011,
       "tag": "0000_strong_micromax",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793372694258,
+      "tag": "0001_solid_iron_lad",
+      "breakpoints": true
     }
   ]
 }
